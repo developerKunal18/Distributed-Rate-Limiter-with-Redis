@@ -1,0 +1,55 @@
+🧠 Why This Is Important
+
+Without rate limiting:
+Client
+   │
+   ▼
+1000 Requests/Second
+   │
+   ▼
+API Server
+   │
+   ▼
+❌ Server Overloaded
+
+With Redis Rate Limiting:
+Client
+   │
+   ▼
+Redis Counter
+   │
+   ├── Limit Not Reached ✔
+   └── Limit Exceeded ❌
+
+Benefits:
+	•	✅ Prevents API abuse
+	•	✅ Protects backend services
+	•	✅ Works across multiple servers
+	•	✅ Centralized request counting
+
+⸻
+
+Used By
+	•	GitHub API
+	•	Stripe API
+	•	Cloudflare
+	•	AWS API Gateway
+	•	Nginx
+
+⸻
+
+🛠 Tech Stack
+	•	Python
+	•	Flask
+	•	Redis
+	•	Docker
+
+⸻
+
+📂 Project Structure
+redis-rate-limiter/
+│
+├── app.py
+├── requirements.txt
+├── docker-compose.yml
+└── README.md
